@@ -12,3 +12,6 @@ def dinner(request):
     menu = ["Jockbal", "Hanbur", "Chicken", "Sushi"]
     pick = random.choice(menu)
     return render(request, 'myapp/dinner.html', {'dinner': pick})
+
+def hello(request, name):
+    return render(request, 'myapp/hello.html', {'name': name})

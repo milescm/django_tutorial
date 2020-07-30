@@ -8,4 +8,8 @@ urlpatterns = [
     #dinner menu 
     path('dinner/', views.dinner, name='dinner'),
 
+    #variable routing
+    path('hello/<str:name>/', views.hello),
+    
+
 ]
