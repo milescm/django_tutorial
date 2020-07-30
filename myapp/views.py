@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import random
 from .models import Post
 
@@ -35,19 +35,19 @@ def new(request):
 
 
 def create(request):
-    title = request.GET.get('title')
-    content = request.GET.get('content')
+    title = request.POST.get('title')
+    content = request.POST.get('content')
 
     post = Post(title=title, content=content)
     post.save()
 
-    post = Post.objects.all().values()
-    return render(request, 'myapp/create.html', {'post': post})
+    return redirect(f'{post.pk}/')
 
 def detail(request, post_id):
     post = Post.objects.get(pk=post_id)
     return render(request, 'myapp/detail.html', {'post': post})
 
 def post_list(request):
-    post = Post.objects.all().values()
+    post = Post.objects.all()
     return render(request, 'myapp/post_list.html', {'post': post})
+

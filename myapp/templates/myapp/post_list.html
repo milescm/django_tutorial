@@ -6,15 +6,20 @@
     </head>
     <body>
         <div class="alarm message">
-            <h1>
-                Post Index       
-            </h1>
+           <a href="/new">New - Write new text </a>
+           <!-- <ul>
+               {% for data in post %}
+                <li><a href = "{{ data }}"></a></li>
+                {% endfor %}
+            </ul>
+                 -->
         </div>
         <div class = "data content">
-            all data : 
-            {% for data in post %}
-                {{ data }}
-            {% endfor %}
+            <ul>
+                {% for data in post %}
+                <li>{{ data }} </li>
+                {% endfor %}
+            </ul>
         </div>
         
     </body>
