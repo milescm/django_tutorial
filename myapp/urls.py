@@ -14,7 +14,13 @@ urlpatterns = [
     #throw request
     path('throw/', views.throw, name='throw'),
 
+    #catch response
     path('catch/', views.catch, name='catch'),
+
+    #call outer html page
+    path('naver/', views.naver, name='naver'),
+
+    
 
 
 ]

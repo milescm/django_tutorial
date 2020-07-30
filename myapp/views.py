@@ -22,3 +22,6 @@ def throw(request):
 def catch(request):
     message = request.GET.get('message')
     return render(request, 'myapp/catch.html', {'message': message})
+
+def naver(request):
+    return render(request, 'myapp/naver.html')
