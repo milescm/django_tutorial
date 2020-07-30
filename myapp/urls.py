@@ -9,7 +9,12 @@ urlpatterns = [
     path('dinner/', views.dinner, name='dinner'),
 
     #variable routing
-    path('hello/<str:name>/', views.hello),
-    
+    path('hello/<str:name>/', views.hello, name='hello'),
+
+    #throw request
+    path('throw/', views.throw, name='throw'),
+
+    path('catch/', views.catch, name='catch'),
+
 
 ]

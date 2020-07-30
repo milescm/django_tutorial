@@ -15,3 +15,10 @@ def dinner(request):
 
 def hello(request, name):
     return render(request, 'myapp/hello.html', {'name': name})
+
+def throw(request):
+    return render(request, 'myapp/throw.html')
+
+def catch(request):
+    message = request.GET.get('message')
+    return render(request, 'myapp/catch.html', {'message': message})
