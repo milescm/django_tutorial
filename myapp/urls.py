@@ -20,7 +20,15 @@ urlpatterns = [
     #call outer html page
     path('naver/', views.naver, name='naver'),
 
-    
+
+    # CRUD 
+    path('create/', views.create, name='create'),
+
+    path('new/', views.new, name='new'),
+
+    path('<int:post_id>/', views.detail, name='detail'),
+
+    path('post_list/', views.post_list, name='post_list'),
 
 
 ]

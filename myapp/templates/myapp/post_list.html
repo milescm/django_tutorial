@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            post_list.html
+        </title>
+    </head>
+    <body>
+        <div class="alarm message">
+            <h1>
+                Post Index       
+            </h1>
+        </div>
+        <div class = "data content">
+            all data : 
+            {% for data in post %}
+                {{ data }}
+            {% endfor %}
+        </div>
+        
+    </body>
+</html>
